@@ -59,6 +59,7 @@
             this.B_BrowsePath.TabIndex = 2;
             this.B_BrowsePath.Text = "...";
             this.B_BrowsePath.UseVisualStyleBackColor = true;
+            this.B_BrowsePath.Click += new System.EventHandler(this.B_BrowsePath_Click);
             // 
             // TB_Path
             // 

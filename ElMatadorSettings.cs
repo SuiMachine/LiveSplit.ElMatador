@@ -85,5 +85,18 @@ namespace LiveSplit.ElMatador
             else
                 MessageBox.Show("Specify a location of the game first!");
         }
+
+        private void B_BrowsePath_Click(object sender, EventArgs e)
+        {
+            FileDialog fd = new OpenFileDialog();
+            fd.Filter = "pc_matador.exe|pc_matador.exe";
+            DialogResult result = fd.ShowDialog();
+            
+            if(result == DialogResult.OK)
+            {
+                DirectoryInfo folder = Directory.GetParent(fd.FileName);
+                TB_Path.Text = folder.ToString();
+            }
+        }
     }
 }
