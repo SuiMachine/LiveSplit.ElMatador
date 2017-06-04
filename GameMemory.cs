@@ -11,8 +11,6 @@ namespace LiveSplit.ElMatador
 {
     class GameMemory
     {
-        public bool isSteam;
-
         public event EventHandler OnLoadStarted;
         public event EventHandler OnLoadFinished;
 
@@ -176,10 +174,10 @@ namespace LiveSplit.ElMatador
                 return null;
             }
 
-            if (!_ignorePIDs.Contains(game.Id) && game.ModulesWow64Safe().Any(mod => mod.ModuleName.ToLower() != "elmatadorgraphwrapper.dll"))
+            if (!_ignorePIDs.Contains(game.Id) && !hasDLLInjected && game.ModulesWow64Safe().Any(mod => mod.ModuleName.ToLower() != "elmatadorgraphwrapper.dll"))
             {
                 Thread.Sleep(500);
-                bool injectedNow = game.ModulesWow64Safe().Any(mod => mod.ModuleName.ToLower() != "elmatadorgraphwrapper.dll");
+                bool injectedNow = game.ModulesWow64Safe().Any(mod => mod.ModuleName.ToLower() == "elmatadorgraphwrapper.dll");
                 if (!injectedNow)
                 {
                     _ignorePIDs.Add(game.Id);

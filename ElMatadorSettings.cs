@@ -80,7 +80,7 @@ namespace LiveSplit.ElMatador
         {
             if (File.Exists(Path.Combine(GamePath, "pc_matador.exe")))
             {
-
+                WrapperDownloader temp = new WrapperDownloader(GamePath);
             }
             else
                 MessageBox.Show("Specify a location of the game first!");
