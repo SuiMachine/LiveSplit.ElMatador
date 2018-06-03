@@ -53,9 +53,8 @@ namespace LiveSplit.ElMatador
 
         static bool ParseBool(XmlNode settings, string setting, bool default_ = false)
         {
-            bool val;
             return settings[setting] != null ?
-                (Boolean.TryParse(settings[setting].InnerText, out val) ? val : default_)
+                (Boolean.TryParse(settings[setting].InnerText, out bool val) ? val : default_)
                 : default_;
         }
 
@@ -88,8 +87,10 @@ namespace LiveSplit.ElMatador
 
         private void B_BrowsePath_Click(object sender, EventArgs e)
         {
-            FileDialog fd = new OpenFileDialog();
-            fd.Filter = "pc_matador.exe|pc_matador.exe";
+            FileDialog fd = new OpenFileDialog
+            {
+                Filter = "pc_matador.exe|pc_matador.exe"
+            };
             DialogResult result = fd.ShowDialog();
             
             if(result == DialogResult.OK)

@@ -1,4 +1,12 @@
 <updates>
+<update version="1.1.0">
+<files>
+<file path="Components/LiveSplit.ElMatador.dll" status="changed"/>
+</files>
+<changelog>
+<change>Corrected the download path, to actually download files instead of page content. Thanks GitHub :-/</change>
+</changelog>
+</update>
 <update version="1.0.0">
 <files>
 <file path="Components/LiveSplit.ElMatador.dll" status="changed"/>

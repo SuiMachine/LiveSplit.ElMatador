@@ -11,7 +11,7 @@ namespace LiveSplit.ElMatador
 {
     class WrapperDownloader
     {
-        private string path = "https://github.com/SuiMachine/LiveSplit.ElMatador/raw/master/Wrapper/Build/";
+        private string path = "https://raw.githubusercontent.com/SuiMachine/LiveSplit.ElMatador/master/Wrapper/Build/";
         private string[] listOfFiles = new string[] { "DSOUND.dll", "ElMatadorGraphWrapper.dll" };
         private string gameFolderPath { get; set; }
 

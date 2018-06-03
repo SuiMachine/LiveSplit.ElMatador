@@ -29,7 +29,7 @@ namespace LiveSplit.ElMatador
             Steam = 6930432
         }*/
 
-        public bool[] splitStates { get; set; }
+        public bool[] SplitStates { get; set; }
 
         public GameMemory(ElMatadorSettings componentSettings)
         {
